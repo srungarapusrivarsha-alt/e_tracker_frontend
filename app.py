@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 import pandas as pd
-server_loc=st.secrets["db_url"]
+server_loc=st.secrets["db_url"].rstrip("/")
 st.title("Expense Tracker Application")
 menu=st.sidebar.selectbox("choose:--",["Add_expenses","view_expenses","update_expenses","Delete_expenses","Search_expenses","Sort_expenses","filter_expenses","Analyse_expenses"])
 if menu=="Add_expenses":
